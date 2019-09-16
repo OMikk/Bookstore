@@ -32,8 +32,8 @@ public class BooksApplication {
 			crepository.save(new Category("Horror"));
 			
 			
-			repository.save(new Book("Norjan kalat", "Matti Mainio", "2015", "1234", "13.45"));
-			repository.save(new Book("Ihmeellinen luonto", "Jorma Jousimies", "2010", "1235", "15.00"));
+			repository.save(new Book("Norjan kalat", "Matti Mainio", "2015", "1234", "13.45", crepository.findByName("Nature").get(0)));
+			repository.save(new Book("Ihmeellinen luonto", "Jorma Jousimies", "2010", "1235", "15.00", crepository.findByName("Nature").get(0)));
 			
 			
 			
