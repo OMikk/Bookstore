@@ -37,12 +37,7 @@ public class BookController {
 	public @ResponseBody List<Book> BookListRest(){
 		return (List<Book>) repository.findAll();
 	}
-	
-	@RequestMapping(value ="/student/{id}", method = RequestMethod.GET)
-	public @ResponseBody Optional<Book> findBookRest(@PathVariable("id") Long bookId) {
-		return repository.findById(bookId);
-	}
-	
+		
 	@RequestMapping(value = "/add")
 	public String addBook(Model model) {
 		model.addAttribute("book", new Book());
